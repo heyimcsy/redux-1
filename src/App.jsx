@@ -18,6 +18,13 @@ function App() {
     <>
       <div>현재 카운트 : {counter.number}</div>
       <button
+        style={{
+          backgroundColor: 'yellow',
+          color: 'orange',
+          border: '1px dotted orange',
+          borderRadius: '5px',
+          padding: '5px 10px',
+        }}
         onClick={() => {
           dispatch({
             type: 'PLUS_ONE',
@@ -25,6 +32,22 @@ function App() {
         }}
       >
         +
+      </button>
+      <button
+        style={{
+          backgroundColor: 'yellow',
+          color: 'orange',
+          border: '1px dotted orange',
+          borderRadius: '5px',
+          padding: '5px 10px',
+        }}
+        onClick={() => {
+          dispatch({
+            type: 'MINUS_ONE',
+          })
+        }}
+      >
+        -
       </button>
     </>
   )

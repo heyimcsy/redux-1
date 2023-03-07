@@ -50,7 +50,8 @@ function App() {
           type="number"
           value={number}
           onChange={(event) => {
-            setNumber(+event.target.value)
+            const { value } = event.target
+            setNumber(+value)
           }}
         />
       </div>

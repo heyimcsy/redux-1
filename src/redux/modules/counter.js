@@ -1,3 +1,7 @@
+//action value
+export const PLUS_ONE = 'counter/PLUS_ONE'
+export const MINUS_ONE = 'counter/MINUS_ONE'
+
 // src/modules/counter.js
 
 // 초기 상태값
@@ -13,13 +17,13 @@ const counter = (state = initialState, action) => {
     // 여기서 말하는 case란, action.type을 의미한다.
     // dispatch로부터 전달받은 action의 type이 "PLUS_ONE" 일 때
     // 아래 return 절이 실행된다.
-    case 'counter/PLUS_ONE':
+    case PLUS_ONE:
       return {
         // 기존 state에 있던 number에 +1을 더한다.
         number: state.number + 1,
       }
 
-    case 'counter/MINUS_ONE':
+    case MINUS_ONE:
       return {
         number: state.number - 1,
       }

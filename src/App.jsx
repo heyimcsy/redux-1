@@ -16,39 +16,58 @@ function App() {
   console.log('counter->', counter.number)
   return (
     <>
-      <div>현재 카운트 : {counter.number}</div>
-      <button
+      <div
         style={{
           backgroundColor: 'yellow',
           color: 'orange',
           border: '1px dotted orange',
           borderRadius: '5px',
           padding: '5px 10px',
-        }}
-        onClick={() => {
-          dispatch({
-            type: 'PLUS_ONE',
-          })
+          width: '150px',
         }}
       >
-        +
-      </button>
-      <button
+        현재 카운트 : {counter.number}
+      </div>
+      <div
         style={{
-          backgroundColor: 'yellow',
-          color: 'orange',
-          border: '1px dotted orange',
-          borderRadius: '5px',
-          padding: '5px 10px',
-        }}
-        onClick={() => {
-          dispatch({
-            type: 'MINUS_ONE',
-          })
+          display: 'flex',
+          // justifyContent: 'center',
+          margin: '20px 55px',
         }}
       >
-        -
-      </button>
+        <button
+          style={{
+            backgroundColor: 'yellow',
+            color: 'orange',
+            border: '1px dotted orange',
+            borderRadius: '5px',
+            padding: '5px 10px',
+          }}
+          onClick={() => {
+            dispatch({
+              type: 'counter/PLUS_ONE',
+            })
+          }}
+        >
+          +
+        </button>
+        <button
+          style={{
+            backgroundColor: 'yellow',
+            color: 'orange',
+            border: '1px dotted orange',
+            borderRadius: '5px',
+            padding: '5px 10px',
+          }}
+          onClick={() => {
+            dispatch({
+              type: 'counter/MINUS_ONE',
+            })
+          }}
+        >
+          -
+        </button>
+      </div>
     </>
   )
 }

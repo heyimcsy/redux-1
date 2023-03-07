@@ -13,13 +13,13 @@ const counter = (state = initialState, action) => {
     // 여기서 말하는 case란, action.type을 의미한다.
     // dispatch로부터 전달받은 action의 type이 "PLUS_ONE" 일 때
     // 아래 return 절이 실행된다.
-    case 'PLUS_ONE':
+    case 'counter/PLUS_ONE':
       return {
         // 기존 state에 있던 number에 +1을 더한다.
         number: state.number + 1,
       }
 
-    case 'MINUS_ONE':
+    case 'counter/MINUS_ONE':
       return {
         number: state.number - 1,
       }
